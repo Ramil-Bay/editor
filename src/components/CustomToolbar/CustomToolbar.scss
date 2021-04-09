@@ -1,0 +1,27 @@
+
+#root .ql {
+    &-toolbar {
+        background: #eaecec;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom: none;
+    }
+    &-container {
+        min-height: 10em;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        background: #fefcfc;
+    }
+
+    &-insertStar__logo{
+        font: normal normal normal 16px/1 Octicons;
+        display: inline-block;
+        text-decoration: none;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        &::before {
+            content: "★";
+        }
+    }    
+
+}
