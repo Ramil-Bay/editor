@@ -22,6 +22,20 @@
         &::before {
             content: "★";
         }
-    }    
+    }
+
+    &-font-times-new-roman {
+        font-family: "Times New Roman";
+    }
+
+    &-picker-item[data-value=times-new-roman]::before {
+        content: "Times New Roman";
+        font-family: "Times New Roman", Times, serif;
+    }
+
+    &-picker-label[data-value=times-new-roman]::before {
+        content: "Times New ";
+        overflow: hidden;
+    }
 
 }

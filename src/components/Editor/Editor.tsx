@@ -1,6 +1,11 @@
 import ReactQuill from 'react-quill';
+import katex from 'katex';
 
 import { CustomToolbar } from '../CustomToolbar/CustomToolbar';
+
+function mounted() {
+    window.katex = katex;
+}
 
 export const Editor = () => {
     return (
@@ -8,7 +13,7 @@ export const Editor = () => {
             <CustomToolbar />
             <ReactQuill theme="snow"
             modules={modules}
-            formats={formats} />
+            ref={mounted} />
         </div>
     )
 }
@@ -19,20 +24,11 @@ function insertStar(this: any) {
     this.quill.setSelection(cursorPosition + 1);
 }
 
-const formats = [
-    'header', 'font', 'size',
-    'bold', 'italic', 'underline', 'strike', 'blockquote',
-    'list', 'bullet', 'indent', 'align',
-    'link', 'image', 'color', 
-    'formula', 'background', 'script',
-]
-
-
 const modules = {
     toolbar: {
         container: "#toolbar",
         handlers: {
-            insertStar: insertStar
+            insertStar: insertStar,
         }
     }
 };
