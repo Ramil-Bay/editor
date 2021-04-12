@@ -6,6 +6,11 @@
         border-top-right-radius: 0.5em;
         border-bottom: none;
     }
+
+    &-size {
+        width: 80px;
+    }
+    
     &-container {
         min-height: 10em;
         border-bottom-left-radius: 0.5em;
@@ -34,7 +39,7 @@
     }
 
     &-picker-label[data-value=times-new-roman]::before {
-        content: "Times New ";
+        content: "Times New... ";
         overflow: hidden;
     }
 
